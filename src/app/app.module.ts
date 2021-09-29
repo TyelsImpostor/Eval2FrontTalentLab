@@ -11,6 +11,9 @@ import { BuscarPorCategoriaComponent } from './compartida/buscar-por-categoria/b
 import { HomeComponent } from './general/home/home.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NotfoundComponent } from './general/notfound/notfound.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { EditarProductoComponent } from './general/editar-producto/editar-producto.component';
 
 @NgModule({
   declarations: [
@@ -23,10 +26,13 @@ import { NotfoundComponent } from './general/notfound/notfound.component';
     BuscarPorCategoriaComponent,
     HomeComponent,
     NotfoundComponent,
+    EditarProductoComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

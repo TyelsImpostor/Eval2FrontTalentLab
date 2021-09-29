@@ -4,48 +4,42 @@
     </div>
     <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
 </div>
+<div class="row">
+    <div class="jumbotron col-5">
+        <h3>Total Carrito: ${{totalCarrito}} </h3>
+        <div *ngFor="let producto of productosCarrito">
+            <div class="row">
+                <div class="col">
+                    {{producto.nombre}} | Cantida: {{producto.stock}}
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" name="textoDeInput" value={{producto.id}} hidden #idProducto>
+                    <button type="submit" class="btn btn-primary btn-sm" (click)="quitarProducto(idProducto.value)">Quitar Producto</button>
+                </div>
+            </div>
+            <br>
+        </div>
+        <button type="submit" class="btn btn-primary btn-sm" (click)="realizarCompra()">Comprar!</button>
+    </div>
+    <div class="col">
+        <h1>{{mensajeCompra}}</h1>
+    </div>
+    <div class="box">
+        <div *ngFor="let producto of productosService.producto">
+            <div class="card" style="width: 18rem;">
+                <img src="{{producto.imagen}}" class="card-img-top" alt="..." weight="bold">
+                <div class="card-body">
+                    <h5 class="card-title">{{producto.nombre}} - ${{producto.precio}}</h5>
+                    <h5 class="card-title">Stock: {{producto.stock}}</h5>
 
-<div class="box">
-    <div class="card" style="width: 18rem;">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYhJlTfQ_fYhvTeSdSexG81zTQ8nL8nbDJGEfJfNQ1lR_WFInUKNhsKEov6nje1UW4JHE&usqp=CAU" class="card-img-top" alt="..." weight="bold">
-        <div class="card-body">
-            <h5 class="card-title">Pan de Molde - $3000</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Comprar</a>
-        </div>
-    </div>
-    <div class="card" style="width: 18rem;">
-        <img src="https://i.blogs.es/a78177/pan-integral/1366_2000.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Pan de Centeno - $6000</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Comprar</a>
-        </div>
-    </div>
-    <div class="card" style="width: 18rem;">
-        <img src="https://statics-cuidateplus.marca.com/cms/pan_dieta_mediterranea.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Pan de Amapola - $1000</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Comprar</a>
-        </div>
-    </div>
-    <div class="card" style="width: 18rem;">
-        <img src="https://www.recetasdepan.net/wp-content/uploads/2019/05/Receta-de-pan-baguette.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Baguette - $2000</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Comprar</a>
-        </div>
-    </div>
+                    <p class="card-text">{{producto.descripcion}}</p>
+                </div>
+                <input type="text" class="form-control" name="textoDeInput" value={{producto.id}} hidden #idProducto>
+                <button type="submit" class="btn btn-primary" (click)="agregarProducto(idProducto.value)">Agregar Producto</button>
+                <br>
+                <button type="submit" class="btn btn-danger" (click)="eliminarProducto(idProducto.value)">Eliminar Producto</button>
 
-    <div class="card" style="width: 18rem;">
-        <img src="https://www.recetasdesbieta.com/wp-content/uploads/2016/09/chapata-casera-1.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Baguette - $2000</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Comprar</a>
+            </div>
         </div>
     </div>
-
 </div>

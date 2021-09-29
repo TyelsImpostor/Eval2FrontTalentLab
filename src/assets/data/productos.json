@@ -1,0 +1,43 @@
+{
+    "productos": [{
+            "id": 1,
+            "nombre": "Pan de Molde",
+            "descripcion": "El pan de molde es un tipo de pan que se caracteriza por tener una textura muy blanda. Suele conservarse mucho más tiempo tierno en comparación al resto de los panes.",
+            "precio": 1000,
+            "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYhJlTfQ_fYhvTeSdSexG81zTQ8nL8nbDJGEfJfNQ1lR_WFInUKNhsKEov6nje1UW4JHE&usqp=CAU",
+            "stock": 50
+        },
+        {
+            "id": 2,
+            "nombre": "Pan de Centeno",
+            "descripcion": "El pan de centeno es un tipo de pan elaborado con la harina de centeno, la panificación muestra una miga más oscura que el clásico pan de trigo, es por esta razón por la que se denomina a veces como pan negro.",
+            "precio": 4900,
+            "imagen": "https://i.blogs.es/a78177/pan-integral/1366_2000.jpg",
+            "stock": 20
+        },
+        {
+            "id": 3,
+            "nombre": "Pan de Amapola",
+            "descripcion": "Este tipo de pan se prepara con semillas de amapola y con cúrcuma y se trata de un pan que destaca por su color amarillento y por su aroma y sabor.",
+            "precio": 2000,
+            "imagen": "https://statics-cuidateplus.marca.com/cms/pan_dieta_mediterranea.jpg",
+            "stock": 75
+        },
+        {
+            "id": 4,
+            "nombre": "Baguette",
+            "descripcion": "Una baguette​ o baguete​ es una variedad de pan que se caracteriza por emplear harina de trigo.",
+            "precio": 9000,
+            "imagen": "https://www.recetasdepan.net/wp-content/uploads/2019/05/Receta-de-pan-baguette.jpg",
+            "stock": 100
+        },
+        {
+            "id": 5,
+            "nombre": "Ciabatta",
+            "descripcion": "La 'ciabatta', 'chapata' o 'chabata', es un tipo de pan italiano clásico con un alto contenido líquido, al menos el 70% del peso total de la harina.",
+            "precio": 4000,
+            "imagen": "https://www.recetasdesbieta.com/wp-content/uploads/2016/09/chapata-casera-1.jpg",
+            "stock": 200
+        }
+    ]
+}

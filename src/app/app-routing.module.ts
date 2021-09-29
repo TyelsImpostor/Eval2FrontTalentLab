@@ -5,6 +5,7 @@ import { RegistroComponent } from './general/registro/registro.component';
 import { ProductosComponent } from './general/productos/productos.component';
 import { HomeComponent } from './general/home/home.component';
 import { NotfoundComponent } from './general/notfound/notfound.component';
+import { EditarProductoComponent } from './general/editar-producto/editar-producto.component';
 
 //referencia a los componentes
 const app_routes: Routes = [
@@ -13,6 +14,7 @@ const app_routes: Routes = [
     { path:'registro', component: RegistroComponent },
     { path:'productos', component: ProductosComponent },
     { path: 'errornotfound', component: NotfoundComponent },
+    { path: 'editarproducto', component: EditarProductoComponent },
     { path: '**', redirectTo: 'errornotfound' },
 
 ];
