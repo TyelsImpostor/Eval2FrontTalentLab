@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { Producto } from 'src/app/interfaces/producto.interface';
 import { CategoriaService } from 'src/app/services/categoria.service';
 import { ProductosService } from 'src/app/services/productos.service';
@@ -15,7 +15,7 @@ export class ProductosComponent implements OnInit {
   ngOnInit(): void {
   }
   productosCarrito: Producto[] = [];
-  totalCarrito: number|any = 0;
+  @Input() totalCarrito: number|any = 0;
   mensajeCompra: string = "";
 
   
@@ -99,6 +99,7 @@ export class ProductosComponent implements OnInit {
       this.mensajeCompra = "Tu Carrito esta vacio!";
     }
   }
+
 
 }
 

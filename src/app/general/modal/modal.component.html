@@ -1,0 +1,69 @@
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Datos de tu Compra</h5>
+
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="form-signin">
+
+                    <h1 class="h3 mb-3 font-weight-normal">Registrarse</h1>
+
+                    <label for="inputNombre" class="sr-only">Pais</label>
+                    <input [(ngModel)]="pais" name="pais" type="text" id="inputPais" class="form-control" placeholder="Pais">
+                    <p style="color:red;">{{mensaje_pais}}</p>
+
+                    <label for="inputCalle" class="sr-only">Calle</label>
+                    <input [(ngModel)]="calle" name="calle" type="text" id="inputCalle" class="form-control" placeholder="Calle">
+                    <p style="color:red;">{{mensaje_calle}}</p>
+
+                    <label for="inputCiudad" class="sr-only">Ciudad</label>
+                    <input [(ngModel)]="ciudad" name="ciudad" type="text" id="inputCiudad" class="form-control" placeholder="Ciudad">
+                    <p style="color:red;">{{mensaje_ciudad}}</p>
+
+                    <label for="inputRegion" class="sr-only">Region</label>
+                    <input [(ngModel)]="region" name="region" type="text" id="inputRegion" class="form-control" placeholder="Region">
+                    <p style="color:red;">{{mensaje_region}}</p>
+
+                    <label for="inputCodigopostal" class="sr-only">Código Postal</label>
+                    <input [(ngModel)]="codigopostal" name="codigopostal" type="text" id="inputCodigopostal" class="form-control" placeholder="Código Postal">
+                    <p style="color:red;">{{mensaje_codigopostal}}</p>
+
+                    <label for="inputTipotarjeta" class="sr-only">Tipo de Tarjeta</label>
+                    <input [(ngModel)]="tipotarjeta" name="tipotarjeta" type="text" id="inputTipotarjeta" class="form-control" placeholder="Tipo de Tarjeta">
+                    <p style="color:red;">{{mensaje_tipotarjeta}}</p>
+
+                    <label for="inputNombre" class="sr-only">Nombre</label>
+                    <input [(ngModel)]="nombre" name="nombre" type="text" id="inputNombre" class="form-control" placeholder="Nombre">
+                    <p style="color:red;">{{mensaje_nombre}}</p>
+
+                    <label for="inputNumerotarjeta" class="sr-only">Numero de Tarjeta</label>
+                    <input [(ngModel)]="numerotarjeta" name="numerotarjeta" type="text" id="inputNumerotarjeta" class="form-control" placeholder="Numero de la tarjeta">
+                    <p style="color:red;">{{mensaje_numerotarjeta}}</p>
+
+                    <label for="inputCodigo" class="sr-only">Código de Seguridad</label>
+                    <input [(ngModel)]="codigo" name="codigo" type="text" id="inputCodigo" class="form-control" placeholder="Código de Seguridad">
+                    <p style="color:red;">{{mensaje_codigo}}</p>
+
+                    <label for="inputMesexp" class="sr-only">Mes de expiración</label>
+                    <input [(ngModel)]="mesexp" name="mesexp" type="text" id="inputMesexp" class="form-control" placeholder="Mes de expiración">
+                    <p style="color:red;">{{mensaje_mesexp}}</p>
+
+                    <label for="inputAnoexp" class="sr-only">Año de expiración</label>
+                    <input [(ngModel)]="anoexp" name="anoexp" type="text" id="inputAnoexp" class="form-control" placeholder="Año de expiración">
+                    <p style="color:red;">{{mensaje_anoexp}}</p>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <h5>
+                    Total de tu compra: ${{totalCarrito}}
+                </h5>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary" (click)="insertar()">Confirmar Pago</button>
+            </div>
+        </div>
+    </div>
+</div>
