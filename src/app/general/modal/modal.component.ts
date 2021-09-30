@@ -127,8 +127,14 @@ export class ModalComponent implements OnInit {
       this.mensaje_nombre = "";
       valido++;
     }
+
+    var tarjeta = /^[0-9]{15,16}|(([0-9]{4}\s){3}[0-9]{3,4})$/;
+
     if (/^\s+|\s+$/.test(this.numerotarjeta)) {
       this.mensaje_numerotarjeta = "Introduzca un cadena de texto.";
+      this.numerotarjeta = "";
+    } else if(!tarjeta.test(this.numerotarjeta)){
+      this.mensaje_numerotarjeta = "Introduzca una tarjeta valida.";
       this.numerotarjeta = "";
     } else if (this.numerotarjeta.trim() == "") {
       this.numerotarjeta = "";
@@ -174,7 +180,6 @@ export class ModalComponent implements OnInit {
 
 
 
-    var tarjeta = /^[0-9]{15,16}|(([0-9]{4}\s){3}[0-9]{3,4})$/;
     /*
     if(valido==3){
       this.mensaje_nombreF = "Nombre: "+ this.nombre;
